@@ -460,35 +460,62 @@
                     </li>
                 </ul>
             </div>
+            <form class="subscribe">
+                <label for="email-sub">
+                    Подпишитесь на рассылку
+                </label>
+                <input type="email" name="email-sub" id="email-sub" placeholder="E-mail">
+                
+            </form>
         </div>
     </footer>
 
   <div class="backdrop is-hidden" data-backdrop >
     <div class="modal">
-        <button class="btnclose" data-close-modal> 
+        <button class="btnclose" data-close-modal>
+            <svg class="name-icon ">
+                <use href="./images/sprite.svg#close"></use>
+            </svg>
         </button>
-    <form class="js-speaker-form">
-            <p>Оставьте свои данные, мы вам перезвоним</p>
-            <label for="name">Имя</label>
-            <br />
-            <input type="text" name="name" id="name" />
-            <br />
-            <label for="tel">Телефон</label>
-            <br />
-            <input type="tel" name="tel" id="tel" />
-            <br />
-            <label for="mail">Почта</label>
-            <br />
-            <input type="email" name="mail" id="mail" />
-            <br />
-            <label for="comment">Комментарий</label>
-            <br />
-            <textarea name="comment" id="comment" cols="30" rows="10" > </textarea>
-            <br />
-            <input type="checkbox" name="agreement" id="agreement" /> 
-            <label for="agreement">Соглашаюсь с рассылкой и принимаю <a href="#"> <span class="terms"> Условия договора</span></a></label>
-            <br />
-            <button type="submit">Отправить</button>
+        <p>Оставьте свои данные, мы вам перезвоним</p>
+        <form class="form js-speaker-form">
+            
+            <label class="form-field" for="name">Имя
+                <svg class="name-icon">
+                    <use href="./images/sprite.svg#person-black"></use>
+                </svg>
+                <input class="fields-input" type="text" name="name" id="name" />
+            </label>
+            
+            <div class="form-field ">
+                <label for="tel">Телефон</label>
+                <svg class="name-icon">
+                    <use href="./images/sprite.svg#phone-black"></use>
+                </svg>
+                <input type="tel" name="tel" id="tel" />
+            </div>
+            <div class="form-field">
+                <label for="mail">Почта</label>
+                <svg class="name-icon">
+                    <use href="./images/sprite.svg#email-black"></use>
+                </svg>
+                <input type="email" name="mail" id="mail" />
+            </div>
+            <div class="form-field divcomment">
+                <label for="comment">Комментарий</label>                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+            </div>
+            <div class="form-field form-agr">
+                <label for="agreement" class="label-agr">
+                    <input class="checkbox" type="checkbox" name="agreement" id="agreement"/> 
+                    <svg class="check"> <use href="./images/sprite.svg#check"></use> 
+                    </svg>
+                    <svg class="checkin">
+                        <use href="./images/sprite.svg#checkin"></use>
+                    </svg>
+                    Соглашаюсь с рассылкой и принимаю&#160<a href="#"> <span class="terms"> Условия договора</span></a>
+               </label>
+            </div>
+            <button class="button-submit" type="submit">Отправить</button>
         </form>
     </div>
 </div>
